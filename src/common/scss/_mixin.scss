@@ -1,0 +1,63 @@
+@import "_theme";
+@import "_variable";
+
+//弹性盒模型
+@mixin flex($justify, $align) {
+  display: flex;
+  justify-content: $justify;
+  align-items: $align;
+}
+//单行长文本截断
+@mixin text_cut_line {
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+//多行长文本截断
+@mixin text_cut_much($lines) {
+  overflow: hidden;
+  text-overflow: ellipsis;
+  display: -webkit-box;
+  -webkit-line-clamp: $lines;
+  -webkit-box-orient: vertical;
+}
+//两端对齐
+@mixin text_justify_line($width, $height) {
+  display: inline-block;
+  text-align: justify;
+  overflow: hidden;
+  width: $width;
+  height: $height;
+  line-height: $height;
+  i {
+    display: inline-block;
+    width: 100%;
+    height: 0;
+  }
+}
+//主题色按钮
+@mixin button_theme {
+  text-align: center;
+  background: $uni-color-theme;
+  color: $uni-color-020714;
+  width: 100%;
+  height: 88rpx;
+  line-height: 88rpx;
+  border-radius: 8rpx;
+  font-size: 32rpx;
+  font-family: PingFangSC-Medium, PingFang SC;
+  font-weight: 500;
+}
+//禁用按钮
+@mixin button_theme_disabled {
+  text-align: center;
+  background: $uni-color-d3d3d3;
+  color: $uni-color-ffffff;
+  width: 100%;
+  height: 88rpx;
+  line-height: 88rpx;
+  border-radius: 8rpx;
+  font-size: 32rpx;
+  font-family: PingFangSC-Medium, PingFang SC;
+  font-weight: 500;
+}

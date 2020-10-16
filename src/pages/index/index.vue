@@ -1,50 +1,41 @@
 <template>
-	<view class="content">
-        <image class="logo" src="../../static/logo.png"></image>
-		<view>
-            <text class="title">{{title}}</text>
-        </view>
-	</view>
+  <view class="launch">
+    <view class="launch-title">你的第一个数字智能钱包</view>
+    <view class="launch-create">创建钱包</view>
+    <view class="launch-add">导入钱包</view>
+  </view>
 </template>
 
 <script lang="ts">
-    import Vue from 'vue';
-	export default Vue.extend({
-		data() {
-			return {
-				title: 'Hello'
-			}
-		},
-		onLoad() {
-
-		},
-		methods: {
-
-		}
-	});
+import { Component, Prop, Vue, Emit, Watch } from "vue-property-decorator";
+@Component({})
+export default class Index extends Vue {
+  //data
+  title: string = "title1";
+  subTitle: number = 666;
+  //watch
+  @Watch("subTitle")
+  onTitleIs(val: number) {
+    console.log(val);
+  }
+  @Watch("title")
+  onTitleChange(val: string) {
+    console.log(val);
+  }
+  //hooks
+  onLoad() {}
+  //methods
+  handleAdd(): void {
+    this.subTitle++;
+    this.title = `${this.title}${this.subTitle}`;
+  }
+}
 </script>
 
 <style>
-	.content {
-		display: flex;
-		flex-direction: column;
-		align-items: center;
-		justify-content: center;
-	}
-
-	.logo {
-		height: 200rpx;
-		width: 200rpx;
-		margin: 200rpx auto 50rpx auto;
-	}
-
-	.text-area {
-		display: flex;
-		justify-content: center;
-	}
-
-	.title {
-		font-size: 36rpx;
-		color: #8f8f94;
-	}
+.launch {
+  width: 100%;
+  height: 100vh;
+  background: linear-gradient(225deg, #2d80c2 0%, #203975 100%);
+}
 </style>
