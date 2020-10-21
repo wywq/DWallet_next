@@ -1,16 +1,31 @@
 {
 	"pages": [ //pages数组中第一项表示应用启动页，参考：https://uniapp.dcloud.io/collocation/pages
+		//首页
 		{
-			"path": "pages/index/index",
+			"path": "pages/index",
+			"style": {
+				"titleNView": false
+			}
+		},
+		//创建钱包
+		{
+			"path": "pages/wallet/createWallet/index",
+			"style": {
+				"navigationBarTitleText": "创建钱包",
+				"app-plus": {}
+			}
+		},
+		//钱包首页
+		{
+			"path": "pages/wallet/index",
 			"style": {
 				"titleNView": false
 			}
 		}
 	],
 	"globalStyle": {
+		"navigationBarBackgroundColor": "#FFFFFF",
 		"navigationBarTextStyle": "black",
-		"navigationBarTitleText": "uni-app",
-		"navigationBarBackgroundColor": "#F8F8F8",
-		"backgroundColor": "#F8F8F8"
+		"backgroundColor": "#FFFFFF"
 	}
 }
