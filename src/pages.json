@@ -12,7 +12,9 @@
 			"path": "pages/wallet/createWallet/index",
 			"style": {
 				"navigationBarTitleText": "创建钱包",
-				"app-plus": {}
+				"app-plus": {
+					"titleNView":
+				}
 			}
 		},
 		//钱包首页
