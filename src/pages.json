@@ -7,14 +7,13 @@
 				"titleNView": false
 			}
 		},
+		//钱包
 		//创建钱包
 		{
 			"path": "pages/wallet/createWallet/index",
 			"style": {
 				"navigationBarTitleText": "创建钱包",
-				"app-plus": {
-					"titleNView":
-				}
+				"titleNView": true
 			}
 		},
 		//钱包首页
@@ -23,8 +22,36 @@
 			"style": {
 				"titleNView": false
 			}
+		},
+		//我的
+		//我的首页
+		{
+			"path": "pages/mine/index",
+			"style": {
+				"titleNView": false
+			}
 		}
 	],
+	"tabBar": {
+		"color": "#999999",
+		"selectedColor": "#2B80C2",
+		"borderStyle": "black",
+		"backgroundColor": "#ffffff",
+		"list": [
+			{
+				"pagePath": "pages/wallet/index",
+				"iconPath": "static/images/wallet_grey@2x.png",
+				"selectedIconPath": "static/images/wallet_blue@2x.png",
+				"text": "钱包"
+			},
+			{
+				"pagePath": "pages/mine/index",
+				"iconPath": "static/images/mine_grey@2x.png",
+				"selectedIconPath": "static/images/mine_blue@2x.png",
+				"text": "我的"
+			}
+		]
+	},
 	"globalStyle": {
 		"navigationBarBackgroundColor": "#FFFFFF",
 		"navigationBarTextStyle": "black",
