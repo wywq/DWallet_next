@@ -1,19 +1,11 @@
 import Vue from "vue";
 import App from "./App.vue";
-import router from "./router";
-import { RouterMount } from "uni-simple-router";
 
+(App as any).mpType = "app";
 Vue.config.productionTip = false;
 
 const app = new Vue({
   ...App,
 });
+
 app.$mount();
-
-// #ifdef H5
-// RouterMount(app, "#app");
-// #endif
-
-// #ifdef APP-PLUS
-//app.$mount(); //为了兼容小程序及app端必须这样写才有效果
-// #endif

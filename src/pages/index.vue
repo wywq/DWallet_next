@@ -3,10 +3,10 @@
     <view class="launch-title">你的第一个数字智能钱包</view>
     <image
       class="launch-icon"
-      src="@/static/images/button_02@2x.png"
+      src="/static/images/button_02@2x.png"
       @click="handleCreate"
     ></image>
-    <image class="launch-icon" src="@/static/images/button_01@2x.png"></image>
+    <image class="launch-icon" src="/static/images/button_01@2x.png"></image>
   </view>
 </template>
 
@@ -14,13 +14,14 @@
 import { Component, Prop, Vue, Emit, Watch } from "vue-property-decorator";
 @Component({})
 export default class Index extends Vue {
-  // $router?: object;
   //hooks
   onLoad() {}
   // methods
   public handleCreate(): void {
-    console.log(this.$router);
-    this["$router"].push({ path: "/pages/wallet/createWallet/index" });
+    console.log(11111);
+    uni.navigateTo({
+      url: "/pages/wallet/createWallet/index",
+    });
   }
 }
 </script>
