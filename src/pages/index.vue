@@ -14,13 +14,13 @@
 import { Component, Prop, Vue, Emit, Watch } from "vue-property-decorator";
 @Component({})
 export default class Index extends Vue {
-  $router!: object;
+  // $router?: object;
   //hooks
   onLoad() {}
   // methods
   public handleCreate(): void {
     console.log(this.$router);
-    // this.$router.push({ path: "pages/wallet/createWallet/index" });
+    this["$router"].push({ path: "/pages/wallet/createWallet/index" });
   }
 }
 </script>
