@@ -18,7 +18,7 @@ export default class Index extends Vue {
   //hooks
   onLoad() {}
   // methods
-  handleCreate(): void {
+  public handleCreate(): void {
     console.log(this.$router);
     // this.$router.push({ path: "pages/wallet/createWallet/index" });
   }

@@ -9,10 +9,4 @@ const app = new Vue({
   ...App,
 });
 
-// #ifdef H5
 RouterMount(app, "#app");
-// #endif
-
-// #ifndef APP-PLUS
-app.$mount(); //为了兼容小程序及app端必须这样写才有效果
-// #endif
